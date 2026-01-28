@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard - CBT Monitoring</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f0f2f5;
+            margin: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        .suspicious {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .safe {
+            color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Daftar Peserta & Analisis Kecurangan</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama Peserta</th>
+                <th>Total Pelanggaran (Rule)</th>
+                <th>Skor AI (Suspicion)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results %}
+            <tr>
+                <td>{{ row.nim }}</td>
+                <td>{{ row.nama_lengkap }}</td>
+                <td>{{ row.violation_count }}</td>
+                <td>{{ "%.2f"|format(row.avg_ai_score) if row.avg_ai_score else "0.00" }}</td>
+                <td>
+                    {% if row.violation_count > 2 or (row.avg_ai_score and row.avg_ai_score > 0.7) %}
+                    <span class="suspicious">Mencurigakan</span>
+                    {% else %}
+                    <span class="safe">Normal</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="margin-top: 2rem;"><a href="{{ url_for('login') }}">Kembali ke Login</a></p>
+</body>
+
+</html>

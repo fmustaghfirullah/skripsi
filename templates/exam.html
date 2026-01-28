@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ujian - CBT Anti-Cheating</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .header {
+            background: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .question {
+            margin-bottom: 2rem;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 0.5rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
+    <div class="header">
+        <h1>CBT Online - Anti Cheating Engine</h1>
+    </div>
+    <div class="container">
+        <h3>{{ exam.subject_name }}</h3>
+        <hr>
+        <div class="question">
+            <p>1. Apa fungsi utama dari algoritma Random Forest pada aplikasi ini?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1"> Menghitung nilai ujian</li>
+                <li><input type="radio" name="q1"> Mendeteksi perilaku kecurangan berdasarkan log</li>
+                <li><input type="radio" name="q1"> Menyimpan data ke database</li>
+                <li><input type="radio" name="q1"> Mengacak urutan soal</li>
+            </ul>
+        </div>
+        <button
+            style="padding: 0.75rem 1.5rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Selesai
+            Ujian</button>
+    </div>
+    <div class="footer">
+        Sistem pemantauan aktif. Dilarang berpindah tab atau menggunakan tombol pintas.
+    </div>
+
+    <script src="{{ url_for('static', filename='js/monitor.js') }}"></script>
+</body>
+
+</html>
