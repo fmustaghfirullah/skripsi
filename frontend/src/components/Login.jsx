@@ -4,71 +4,71 @@ import { motion } from 'framer-motion';
 import { Shield, User as UserIcon, LogIn } from 'lucide-react';
 
 const Login = ({ onLogin }) => {
-    const [nama, setNama] = useState('');
-    const [nim, setNim] = useState('');
-    const [loading, setLoading] = useState(false);
+  const [nama, setNama] = useState('');
+  const [nim, setNim] = useState('');
+  const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        try {
-            const res = await axios.post('http://localhost:5000/api/login', { nama, nim });
-            onLogin(res.data);
-        } catch (err) {
-            alert("Login gagal. Pastikan server backend sudah berjalan.");
-        } finally {
-            setLoading(false);
-        }
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await axios.post('http://localhost:5000/api/login', { nama, nim });
+      onLogin(res.data);
+    } catch (err) {
+      alert("Login gagal. Pastikan server backend sudah berjalan.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    return (
-        <div className="login-container">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="login-card glass"
-            >
-                <div className="login-header">
-                    <div className="logo-box">
-                        <Shield size={32} color="#00b4db" />
-                    </div>
-                    <h1>CBT Secure</h1>
-                    <p>Rule-Based & AI Behavior Monitoring</p>
-                </div>
+  return (
+    <div className="login-container">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="login-card glass"
+      >
+        <div className="login-header">
+          <div className="logo-box">
+            <Shield size={32} color="#00b4db" />
+          </div>
+          <h1>CBT Secure</h1>
+          <p>Rule-Based & AI Behavior Monitoring</p>
+        </div>
 
-                <form onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <UserIcon size={18} className="input-icon" />
-                        <input
-                            type="text"
-                            placeholder="Full Name"
-                            value={nama}
-                            onChange={(e) => setNama(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="input-group">
-                        <Shield size={18} className="input-icon" />
-                        <input
-                            type="text"
-                            placeholder="NIM / Student ID"
-                            value={nim}
-                            onChange={(e) => setNim(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="btn-primary" disabled={loading}>
-                        {loading ? "Initializing..." : <><LogIn size={20} /> Enter Examination</>}
-                    </button>
-                </form>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <UserIcon size={18} className="input-icon" />
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <Shield size={18} className="input-icon" />
+            <input
+              type="text"
+              placeholder="NIM / Student ID"
+              value={nim}
+              onChange={(e) => setNim(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btn-primary" disabled={loading}>
+            {loading ? "Initializing..." : <><LogIn size={20} /> Enter Examination</>}
+          </button>
+        </form>
 
-                <div className="login-footer">
-                    <p>Admin access: use NIM <span>admin</span></p>
-                </div>
-            </motion.div>
+        <div className="login-footer">
+          <p>Admin: <span>admin</span> • Guru: <span>guru</span> • Siswa: NIM</p>
+        </div>
+      </motion.div>
 
-            <style>{`
+      <style>{`
         .login-container {
           display: flex;
           justify-content: center;
@@ -123,8 +123,8 @@ const Login = ({ onLogin }) => {
           font-weight: 600;
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Login;

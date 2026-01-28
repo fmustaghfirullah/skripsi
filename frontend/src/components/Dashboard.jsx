@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { Users, AlertTriangle, ShieldCheck, Activity, Search } from 'lucide-react';
+import { Users, AlertTriangle, ShieldCheck, Activity, Search, Eye, AlertOctagon, CheckSquare } from 'lucide-react';
+import EvidenceModal from './EvidenceModal';
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedSession, setSelectedSession] = useState(null);
 
     useEffect(() => {
         const fetch = async () => {
@@ -17,59 +19,92 @@ const Dashboard = () => {
             }
         };
         fetch();
-        const interval = setInterval(fetch, 5000); // Poll every 5s
+        const interval = setInterval(fetch, 2500); // Fast polling for "Live" feel
         return () => clearInterval(interval);
     }, []);
 
-    // Stats calculation
-    const totalStudents = data.length;
-    let totalViolations = 0;
-    let suspiciousAlerts = 0;
-
+    // Process and Sort Data by Risk
     const processedData = data.map(user => {
         let violations = 0;
         let scores = [];
-        user.SessionMonitorings?.forEach(s => {
-            s.EventLogs?.forEach(l => {
+        const activeSession = user.SessionMonitorings?.find(s => s.status === 'ACTIVE') || user.SessionMonitorings?.[0]; // Prefer active
+
+        if (activeSession) {
+            activeSession.EventLogs?.forEach(l => {
                 if (l.RuleViolation) violations++;
                 if (l.RFModelResult) scores.push(l.RFModelResult.conf_score);
             });
-        });
-        const avgScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
-        totalViolations += violations;
-        if (violations > 3 || avgScore > 0.7) suspiciousAlerts++;
+        }
 
-        return { ...user, violations, avgScore };
-    });
+        const avgScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
+        const riskLevel = (violations > 3 || avgScore > 0.6) ? 'CRITICAL' : (avgScore > 0.3 ? 'SUSPICIOUS' : 'SAFE');
+        const riskValue = riskLevel === 'CRITICAL' ? 3 : riskLevel === 'SUSPICIOUS' ? 2 : 1;
+
+        return { ...user, violations, avgScore, riskLevel, riskValue, activeSession };
+    }).sort((a, b) => b.riskValue - a.riskValue); // Sort High Risk first
 
     const filteredData = processedData.filter(u =>
         u.nama_lengkap.toLowerCase().includes(searchTerm.toLowerCase()) ||
         u.nim.includes(searchTerm)
     );
 
+    const activeViolations = processedData.filter(u => u.riskLevel === 'CRITICAL').length;
+    const suspiciousCount = processedData.filter(u => u.riskLevel === 'SUSPICIOUS').length;
+
+    const handleTerminate = async (sessionId) => {
+        if (confirm("ARE YOU SURE? This will immediately stop the student's exam.")) {
+            await axios.post('http://localhost:5000/api/admin/terminate', { session_id: sessionId });
+        }
+    };
+
+    const handleWarn = async (sessionId) => {
+        const msg = prompt("Enter warning message for student:");
+        if (msg) {
+            await axios.post('http://localhost:5000/api/admin/warn', { session_id: sessionId, message: msg });
+        }
+    };
+
     return (
         <div className="dash-layout">
+            {selectedSession && (
+                <EvidenceModal
+                    session={selectedSession}
+                    onClose={() => setSelectedSession(null)}
+                />
+            )}
+
             <header className="dash-header">
                 <div>
-                    <h1>Control Center</h1>
-                    <p>Real-time Behavioral Analytics Dashboard</p>
+                    <h1>Live Command Center</h1>
+                    <p>Real-time Threat Monitoring Matrix</p>
                 </div>
-                <div className="search-bar glass">
-                    <Search size={18} />
-                    <input
-                        placeholder="Search by student name or ID..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
+                <div className="header-actions">
+                    {activeViolations > 0 && (
+                        <motion.div
+                            initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ repeat: Infinity, duration: 1 }}
+                            className="live-alert"
+                        >
+                            <AlertOctagon size={20} />
+                            <span>{activeViolations} CRITICAL THREATS ACTIVE</span>
+                        </motion.div>
+                    )}
+                    <div className="search-bar glass">
+                        <Search size={18} />
+                        <input
+                            placeholder="Search student..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
                 </div>
             </header>
 
             {/* KPI Cards */}
             <div className="kpi-grid">
-                <KPICard title="Total Participants" value={totalStudents} icon={<Users />} color="var(--primary)" />
-                <KPICard title="Rule Violations" value={totalViolations} icon={<AlertTriangle />} color="var(--warning)" />
-                <KPICard title="Suspicious Flags" value={suspiciousAlerts} icon={<Activity />} color="var(--danger)" />
-                <KPICard title="System Integrity" value="98.4%" icon={<ShieldCheck />} color="var(--success)" />
+                <KPICard title="Total Active" value={processedData.length} icon={<Users />} color="var(--primary)" />
+                <KPICard title="High Risk" value={activeViolations} icon={<AlertOctagon />} color="#ef4444" />
+                <KPICard title="Suspicious" value={suspiciousCount} icon={<AlertTriangle />} color="#f59e0b" />
+                <KPICard title="System Status" value="Online" icon={<Activity />} color="#22c55e" />
             </div>
 
             {/* Main Table */}
@@ -77,20 +112,24 @@ const Dashboard = () => {
                 <table className="modern-table">
                     <thead>
                         <tr>
+                            <th>Status</th>
                             <th>Student Identity</th>
-                            <th>Rule Violation Count</th>
-                            <th>AI Suspicion Score</th>
-                            <th>Live Status</th>
-                            <th>Actions</th>
+                            <th>Risk Assessment</th>
+                            <th>AI Trust Score</th>
+                            <th>Intervention</th>
                         </tr>
                     </thead>
                     <tbody>
                         {filteredData.map((user) => (
                             <motion.tr
                                 initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
+                                animate={{ opacity: 1, backgroundColor: user.riskLevel === 'CRITICAL' ? 'rgba(239, 68, 68, 0.1)' : 'transparent' }}
                                 key={user.user_id}
+                                className={`row-${user.riskLevel.toLowerCase()}`}
                             >
+                                <td>
+                                    <div className={`status-dot ${user.riskLevel.toLowerCase()}`}></div>
+                                </td>
                                 <td>
                                     <div className="user-cell">
                                         <div className="avatar">{user.nama_lengkap[0]}</div>
@@ -101,26 +140,40 @@ const Dashboard = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <span className={`count-pill ${user.violations > 3 ? 'danger' : ''}`}>
-                                        {user.violations} Events
-                                    </span>
+                                    {user.riskLevel === 'CRITICAL' && <span className="badge badge-danger">CRITICAL</span>}
+                                    {user.riskLevel === 'SUSPICIOUS' && <span className="badge badge-warning">SUSPICIOUS</span>}
+                                    {user.riskLevel === 'SAFE' && <span className="badge badge-success">SAFE</span>}
+                                    <span className="violation-sub">{user.violations} flags</span>
                                 </td>
                                 <td>
                                     <div className="score-cell">
                                         <div className="score-bar-bg">
-                                            <div className="score-bar" style={{ width: `${user.avgScore * 100}%`, background: user.avgScore > 0.7 ? 'var(--danger)' : 'var(--primary)' }}></div>
+                                            <div className="score-bar" style={{
+                                                width: `${(1 - user.avgScore) * 100}%`, // Trust score
+                                                background: user.riskLevel === 'CRITICAL' ? '#ef4444' : '#22c55e'
+                                            }}></div>
                                         </div>
-                                        <span>{(user.avgScore).toFixed(2)}</span>
+                                        <span>{((1 - user.avgScore) * 100).toFixed(0)}% Trust</span>
                                     </div>
                                 </td>
                                 <td>
-                                    {user.violations > 3 || user.avgScore > 0.7 ?
-                                        <span className="badge badge-danger">High Risk</span> :
-                                        <span className="badge badge-success">Normal</span>
-                                    }
-                                </td>
-                                <td>
-                                    <button className="view-details">View Logs</button>
+                                    <div className="action-buttons">
+                                        <button className="btn-icon" title="View Evidence" onClick={() => setSelectedSession(user.activeSession)}>
+                                            <Eye size={16} />
+                                        </button>
+                                        {user.activeSession?.status === 'ACTIVE' ? (
+                                            <>
+                                                <button className="btn-icon warn" title="Send Warning" onClick={() => handleWarn(user.activeSession.session_id)}>
+                                                    <AlertTriangle size={16} />
+                                                </button>
+                                                <button className="btn-icon term" title="Terminate Exam" onClick={() => handleTerminate(user.activeSession.session_id)}>
+                                                    <AlertOctagon size={16} />
+                                                </button>
+                                            </>
+                                        ) : (
+                                            <span className="terminated-badge">TERMINATED</span>
+                                        )}
+                                    </div>
                                 </td>
                             </motion.tr>
                         ))}
@@ -129,36 +182,45 @@ const Dashboard = () => {
             </div>
 
             <style>{`
-        .dash-layout { padding: 2rem; max-width: 1400px; margin: 0 auto; }
-        .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-        .search-bar { display: flex; align-items: center; gap: 10px; padding: 0.75rem 1.5rem; width: 400px; }
+        .dash-layout { padding: 3rem 2rem; max-width: 1400px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; }
+        .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+        .header-actions { display: flex; gap: 1rem; align-items: center; }
+        .live-alert { background: #ef4444; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px; font-size: 0.8rem; }
+        .search-bar { display: flex; align-items: center; gap: 10px; padding: 0.75rem 1.5rem; width: 300px; }
         .search-bar input { background: transparent; border: none; padding: 0; box-shadow: none; }
         
-        .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
-        .kpi-card { padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
-        .icon-box { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
-        .kpi-info h4 { margin: 0; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; }
-        .kpi-info p { margin: 0.25rem 0 0; font-size: 1.5rem; font-weight: 700; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .kpi-card { padding: 1.25rem; display: flex; align-items: center; gap: 1rem; }
+        .icon-box { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .kpi-info h4 { margin: 0; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
+        .kpi-info p { margin: 0; font-size: 1.5rem; font-weight: 700; }
         
-        .table-container { padding: 1rem; }
         .modern-table { width: 100%; border-collapse: collapse; }
-        .modern-table th { padding: 1rem; text-align: left; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-        .modern-table td { padding: 1.25rem 1rem; border-bottom: 1px solid var(--border); }
+        .modern-table th { padding: 1rem; text-align: left; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+        .modern-table td { padding: 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
         
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .status-dot.critical { background: #ef4444; box-shadow: 0 0 10px #ef4444; animation: pulse 1s infinite; }
+        .status-dot.suspicious { background: #f59e0b; }
+        .status-dot.safe { background: #22c55e; }
+
         .user-cell { display: flex; align-items: center; gap: 12px; }
-        .avatar { width: 40px; height: 40px; background: rgba(0, 180, 219, 0.2); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
-        .u-name { margin: 0; font-weight: 600; }
+        .avatar { width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; }
+        .u-name { margin: 0; font-weight: 600; font-size: 0.9rem; }
         .u-nim { margin: 0; font-size: 0.75rem; color: var(--text-muted); }
+
+        .violation-sub { display: block; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
         
-        .count-pill { padding: 4px 12px; background: rgba(255,255,255,0.05); border-radius: 6px; font-size: 0.85rem; }
-        .count-pill.danger { background: rgba(239,68,68,0.15); color: #f87171; }
-        
-        .score-cell { display: flex; align-items: center; gap: 10px; width: 120px; }
-        .score-bar-bg { flex: 1; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
-        .score-bar { height: 100%; border-radius: 3px; }
-        
-        .view-details { background: transparent; border: 1px solid var(--border); color: var(--text-muted); font-size: 0.75rem; padding: 6px 12px; }
-        .view-details:hover { border-color: var(--primary); color: var(--primary); }
+        .score-bar-bg { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 4px; }
+        .score-bar { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+        .score-cell span { font-size: 0.8rem; font-weight: 600; }
+
+        .action-buttons { display: flex; gap: 8px; }
+        .btn-icon { width: 32px; height: 32px; padding: 0; border: 1px solid var(--border); background: transparent; color: var(--text-main); border-radius: 6px; }
+        .btn-icon:hover { background: rgba(255,255,255,0.1); }
+        .btn-icon.warn:hover { border-color: #f59e0b; color: #f59e0b; }
+        .btn-icon.term:hover { border-color: #ef4444; color: #ef4444; }
+        .terminated-badge { font-size: 0.7rem; font-weight: 700; color: #ef4444; border: 1px solid #ef4444; padding: 2px 6px; border-radius: 4px; }
       `}</style>
         </div>
     );
@@ -166,12 +228,12 @@ const Dashboard = () => {
 
 const KPICard = ({ title, value, icon, color }) => (
     <div className="kpi-card glass">
-        <div className="icon-box" style={{ background: `${color}15`, color: color }}>
-            {React.cloneElement(icon, { size: 28 })}
+        <div className="icon-box" style={{ background: `${color}20`, color: color }}>
+            {React.cloneElement(icon, { size: 24 })}
         </div>
         <div className="kpi-info">
             <h4>{title}</h4>
-            <p>{value}</p>
+            <p style={{ color }}>{value}</p>
         </div>
     </div>
 );

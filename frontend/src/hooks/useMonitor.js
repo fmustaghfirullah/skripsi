@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 
-const useMonitor = (sessionId) => {
+const useMonitor = (sessionId, onResponse) => {
     useEffect(() => {
         if (!sessionId) return;
 
@@ -12,9 +12,9 @@ const useMonitor = (sessionId) => {
                     activity_type: activityType,
                     details
                 });
-                if (response.data.violated) {
-                    alert("PERINGATAN: Deteksi Pelanggaran Sistem!");
-                }
+
+                if (onResponse) onResponse(response.data);
+                // Alert handled by component via callback
             } catch (err) {
                 console.error("Log error:", err);
             }

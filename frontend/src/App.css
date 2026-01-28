@@ -40,6 +40,14 @@ body {
   border-radius: 16px;
 }
 
+.centered-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
 /* Typography */
 h1,
 h2,
