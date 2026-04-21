@@ -737,3 +737,155 @@
 [22/4/2026, 00.30.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
 [22/4/2026, 00.30.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
 [22/4/2026, 00.30.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.30.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.30.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.30.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[22/4/2026, 00.30.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[22/4/2026, 00.30.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[22/4/2026, 00.30.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.30.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 19ms
+[22/4/2026, 00.30.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.30.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.30.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.30.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.31.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[22/4/2026, 00.31.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[22/4/2026, 00.31.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[22/4/2026, 00.31.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.31.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[22/4/2026, 00.31.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[22/4/2026, 00.31.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[22/4/2026, 00.31.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 46ms
+[22/4/2026, 00.31.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[22/4/2026, 00.31.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.31.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.35] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.31.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.31.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.31.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.31.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.31.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.31.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.31.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.31.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.32.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.32.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.32.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.32.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.32.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[22/4/2026, 00.32.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 17ms
+[22/4/2026, 00.32.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.32.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.32.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.32.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.32.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.32.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.32.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.32.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[22/4/2026, 00.32.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.32.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.32.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.32.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.32.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[22/4/2026, 00.33.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[22/4/2026, 00.33.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.33.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[22/4/2026, 00.33.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[22/4/2026, 00.33.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[22/4/2026, 00.33.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.33.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.33.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.33.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 18ms
+[22/4/2026, 00.33.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[22/4/2026, 00.33.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[22/4/2026, 00.33.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.33.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.33.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.33.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.33.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[22/4/2026, 00.33.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.33.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.33.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.33.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.34.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.34.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.34.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[22/4/2026, 00.34.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.34.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.34.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[22/4/2026, 00.34.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.34.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[22/4/2026, 00.34.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[22/4/2026, 00.34.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[22/4/2026, 00.34.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[22/4/2026, 00.34.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
