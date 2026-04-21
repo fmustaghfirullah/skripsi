@@ -1,23 +1,365 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
-    <title>Login - CBT Anti-Cheating</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Online – Masuk Ujian</title>
+    <meta name="description" content="Sistem Ujian Online berbasis Computer Based Test dengan Anti-Cheating Engine">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; }
-        .login-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; }
-        input { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 0.75rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #818cf8;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --danger: #ef4444;
+            --bg: #0f0f1a;
+            --surface: #1a1a2e;
+            --surface2: #16213e;
+            --border: rgba(255,255,255,0.08);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 20% 50%, rgba(79,70,229,0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(6,182,212,0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at 50% 80%, rgba(16,185,129,0.08) 0%, transparent 50%);
+            animation: bgPulse 8s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes bgPulse {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(3deg); }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            opacity: 0;
+            animation: float linear infinite;
+        }
+        .particle:nth-child(1)  { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+        .particle:nth-child(2)  { left: 25%; animation-duration: 15s; animation-delay: 2s; width: 6px; height: 6px; background: var(--accent); }
+        .particle:nth-child(3)  { left: 50%; animation-duration: 10s; animation-delay: 4s; }
+        .particle:nth-child(4)  { left: 70%; animation-duration: 14s; animation-delay: 1s; background: var(--success); }
+        .particle:nth-child(5)  { left: 85%; animation-duration: 11s; animation-delay: 3s; width: 5px; height: 5px; }
+        .particle:nth-child(6)  { left: 40%; animation-duration: 13s; animation-delay: 5s; background: var(--accent); }
+
+        @keyframes float {
+            0% { transform: translateY(110vh) scale(0); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+
+        .wrapper {
+            display: flex;
+            width: 860px;
+            max-width: 95vw;
+            min-height: 540px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(79,70,229,0.1);
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(32px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Left panel */
+        .panel-left {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #7c3aed 100%);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .panel-left::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 220px; height: 220px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .panel-left::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -40px;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .brand {
+            position: relative; z-index: 2;
+        }
+        .brand-icon {
+            width: 52px; height: 52px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .brand h1 {
+            font-size: 1.5rem; font-weight: 700; color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .brand p {
+            font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.4rem;
+        }
+
+        .features {
+            position: relative; z-index: 2;
+        }
+        .feature-item {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .feature-icon {
+            width: 36px; height: 36px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; flex-shrink: 0;
+        }
+        .feature-text { font-size: 0.85rem; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+        .trust-badge {
+            position: relative; z-index: 2;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.78rem; color: rgba(255,255,255,0.8);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* Right panel */
+        .panel-right {
+            width: 380px;
+            background: var(--surface);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-title { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+        .form-subtitle { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 2rem; }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .input-wrap {
+            position: relative;
+        }
+        .input-icon {
+            position: absolute;
+            left: 1rem; top: 50%; transform: translateY(-50%);
+            font-size: 1rem; color: var(--text-muted);
+            pointer-events: none;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.85rem 1rem 0.85rem 2.8rem;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .form-group input::placeholder { color: var(--text-muted); }
+        .form-group input:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.95rem;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            box-shadow: 0 4px 20px rgba(79,70,229,0.4);
+            margin-top: 0.5rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(79,70,229,0.5);
+        }
+        .btn-submit:active { transform: translateY(0); }
+
+        .divider {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        .divider::before, .divider::after {
+            content: ''; flex: 1;
+            height: 1px; background: var(--border);
+        }
+        .divider span { font-size: 0.75rem; color: var(--text-muted); }
+
+        .admin-hint {
+            background: rgba(6,182,212,0.08);
+            border: 1px solid rgba(6,182,212,0.2);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 0.78rem;
+            color: var(--accent);
+            display: flex; align-items: flex-start; gap: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .panel-left { display: none; }
+            .panel-right { width: 100%; }
+        }
     </style>
 </head>
+
 <body>
-    <div class="login-card">
-        <h2>CBT Login</h2>
-        <form method="POST">
-            <input type="text" name="nama" placeholder="Nama Lengkap" required>
-            <input type="text" name="nim" placeholder="NIM" required>
-            <button type="submit">Masuk Ujian</button>
-        </form>
-        <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">* Gunakan NIM 'admin' untuk akses dashboard.</p>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Left Info Panel -->
+        <div class="panel-left">
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+                <h1>CBT Anti-Cheating</h1>
+                <p>Sistem Ujian Online Terpercaya</p>
+            </div>
+
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <span class="feature-text">Deteksi kecurangan berbasis AI (Random Forest)</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <span class="feature-text">Monitoring aktivitas peserta secara real-time</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <span class="feature-text">Sistem anti tab-switch & anti copy-paste</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <span class="feature-text">Laporan otomatis skor kecurangan tiap peserta</span>
+                </div>
+            </div>
+
+            <div class="trust-badge">
+                <span>🛡️</span>
+                <span>Dijaga oleh algoritma machine learning &amp; rule-based detection</span>
+            </div>
+        </div>
+
+        <!-- Right Login Panel -->
+        <div class="panel-right">
+            <p class="form-title">Selamat Datang</p>
+            <p class="form-subtitle">Masukkan identitas Anda untuk mulai ujian</p>
+
+            <form method="POST" autocomplete="off">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Andi Pratama" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nim">NIM / Nomor Peserta</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🪪</span>
+                        <input type="text" id="nim" name="nim" placeholder="Contoh: 2021001234" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>Masuk ke Ujian</span>
+                    <span>→</span>
+                </button>
+            </form>
+
+            <div class="divider"><span>INFO</span></div>
+
+            <div class="admin-hint">
+                ℹ️ Gunakan NIM <strong>admin</strong> untuk mengakses halaman dashboard monitoring peserta.
+            </div>
+        </div>
     </div>
 </body>
 </html>

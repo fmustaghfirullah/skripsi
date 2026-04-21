@@ -1,78 +1,590 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
-    <title>Admin Dashboard - CBT Monitoring</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin – CBT Monitoring</title>
+    <meta name="description" content="Dashboard monitoring admin untuk sistem CBT Anti-Cheating">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #818cf8;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg: #0f0f1a;
+            --surface: #1a1a2e;
+            --surface2: #16213e;
+            --border: rgba(255,255,255,0.08);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
         body {
-            font-family: sans-serif;
-            background: #f0f2f5;
-            margin: 2rem;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ========== TOPBAR ========== */
+        .topbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 50;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 1rem; }
+        .logo-icon {
+            width: 38px; height: 38px;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+        }
+        .logo-text { font-weight: 700; font-size: 1rem; }
+        .logo-sub { font-size: 0.72rem; color: var(--text-muted); }
+
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.8rem; color: var(--text-muted);
+            padding-left: 1rem;
+            border-left: 1px solid var(--border);
+        }
+        .breadcrumb span:last-child { color: var(--text); font-weight: 500; }
+
+        .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
+        .admin-badge {
+            background: rgba(79,70,229,0.15);
+            border: 1px solid rgba(79,70,229,0.3);
+            border-radius: 20px;
+            padding: 0.3rem 0.85rem;
+            font-size: 0.78rem; font-weight: 600;
+            color: var(--primary-light);
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .btn-logout {
+            padding: 0.45rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem; font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .btn-logout:hover { border-color: var(--danger); color: var(--danger); }
+
+        /* ========== MAIN LAYOUT ========== */
+        .page {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 220px; flex-shrink: 0;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            min-height: calc(100vh - 64px);
+            padding: 1.5rem 0.75rem;
+            position: sticky; top: 64px;
+            height: calc(100vh - 64px);
+            overflow-y: auto;
+        }
+        .nav-section { margin-bottom: 1.5rem; }
+        .nav-section-label {
+            font-size: 0.65rem; font-weight: 700;
+            color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.1em; padding: 0 0.75rem; margin-bottom: 0.5rem;
+        }
+        .nav-item {
+            display: flex; align-items: center; gap: 0.65rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.855rem; color: var(--text-muted);
+            cursor: pointer; transition: all 0.15s;
+            text-decoration: none;
+        }
+        .nav-item:hover { background: var(--surface2); color: var(--text); }
+        .nav-item.active {
+            background: rgba(79,70,229,0.15);
+            color: var(--primary-light); font-weight: 600;
+        }
+        .nav-icon { font-size: 1rem; width: 20px; text-align: center; }
+
+        /* Main content */
+        .content { flex: 1; padding: 2rem; min-width: 0; }
+
+        /* Page header */
+        .page-header {
+            display: flex; align-items: flex-start; justify-content: space-between;
+            margin-bottom: 1.75rem;
+        }
+        .page-title { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+        .page-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+        .header-actions { display: flex; gap: 0.75rem; }
+        .btn {
+            padding: 0.6rem 1.1rem;
+            border-radius: 9px; border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+        .btn-outline:hover { border-color: var(--primary-light); color: var(--primary-light); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(79,70,229,0.4); }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            display: flex; align-items: center; justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative; overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+        }
+        .stat-card.blue::before { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+        .stat-card.green::before { background: linear-gradient(90deg, var(--success), #34d399); }
+        .stat-card.red::before { background: linear-gradient(90deg, var(--danger), #f87171); }
+        .stat-card.yellow::before { background: linear-gradient(90deg, var(--warning), #fbbf24); }
+        .stat-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .stat-info { }
+        .stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.4rem; }
+        .stat-val { font-size: 1.8rem; font-weight: 700; color: var(--text); line-height: 1; }
+        .stat-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem; }
+        .stat-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+        }
+        .stat-icon.blue { background: rgba(79,70,229,0.15); }
+        .stat-icon.green { background: rgba(16,185,129,0.15); }
+        .stat-icon.red { background: rgba(239,68,68,0.15); }
+        .stat-icon.yellow { background: rgba(245,158,11,0.15); }
+
+        /* Table Section */
+        .table-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .table-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .table-title { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+        .table-subtitle { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.45rem 1rem 0.45rem 2.2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem; color: var(--text);
+            outline: none; width: 200px;
+            transition: border-color 0.2s;
+        }
+        .search-box input:focus { border-color: var(--primary-light); }
+        .search-box input::placeholder { color: var(--text-muted); }
+        .search-icon {
+            position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%);
+            font-size: 0.8rem; color: var(--text-muted);
         }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%; border-collapse: collapse;
         }
-
-        th,
-        td {
-            padding: 1rem;
+        thead th {
+            padding: 0.75rem 1.5rem;
             text-align: left;
-            border-bottom: 1px solid #eee;
+            font-size: 0.72rem; font-weight: 700;
+            color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.07em;
+            background: var(--surface2);
+            border-bottom: 1px solid var(--border);
+        }
+        tbody tr {
+            border-bottom: 1px solid var(--border2);
+            transition: background 0.15s;
+        }
+        tbody tr:hover { background: rgba(255,255,255,0.02); }
+        tbody tr:last-child { border-bottom: none; }
+        td {
+            padding: 1rem 1.5rem;
+            font-size: 0.875rem;
+            color: var(--text);
         }
 
-        th {
-            background: #007bff;
-            color: white;
+        .avatar {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            font-size: 0.9rem; font-weight: 700; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .student-cell { display: flex; align-items: center; gap: 0.75rem; }
+        .student-name { font-weight: 600; color: var(--text); }
+        .student-nim { font-size: 0.75rem; color: var(--text-muted); }
+
+        .nim-badge {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.78rem; font-weight: 600;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
         }
 
-        .suspicious {
-            color: #dc3545;
-            font-weight: bold;
+        .score-bar-wrap { display: flex; align-items: center; gap: 0.75rem; }
+        .score-bar-bg {
+            flex: 1; height: 6px; background: var(--surface2);
+            border-radius: 3px; overflow: hidden;
+            max-width: 80px;
+        }
+        .score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.8s ease; }
+        .score-text { font-size: 0.82rem; font-weight: 600; min-width: 32px; text-align: right; }
+
+        .badge {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem; font-weight: 600;
+        }
+        .badge-danger {
+            background: rgba(239,68,68,0.12);
+            color: var(--danger);
+            border: 1px solid rgba(239,68,68,0.25);
+        }
+        .badge-success {
+            background: rgba(16,185,129,0.12);
+            color: var(--success);
+            border: 1px solid rgba(16,185,129,0.25);
+        }
+        .badge-warn {
+            background: rgba(245,158,11,0.12);
+            color: var(--warning);
+            border: 1px solid rgba(245,158,11,0.25);
         }
 
-        .safe {
-            color: #28a745;
+        .action-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem; font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer; transition: all 0.15s;
+        }
+        .action-btn:hover { border-color: var(--primary-light); color: var(--primary-light); }
+
+        .empty-state {
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            display: none;
+        }
+        .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .empty-title { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+        .empty-desc { font-size: 0.85rem; }
+
+        .table-footer {
+            padding: 0.85rem 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+            font-size: 0.78rem; color: var(--text-muted);
+        }
+        .pagination { display: flex; gap: 0.4rem; }
+        .page-btn {
+            width: 32px; height: 32px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            font-size: 0.8rem; color: var(--text-muted);
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: all 0.15s;
+        }
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        /* Color utilities */
+        .colors { --c1: #6366f1; --c2: #8b5cf6; --c3: #06b6d4; --c4: #10b981; --c5: #f59e0b; --c6: #ef4444; }
+
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .page-header { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
 
 <body>
-    <h2>Daftar Peserta & Analisis Kecurangan</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>NIM</th>
-                <th>Nama Peserta</th>
-                <th>Total Pelanggaran (Rule)</th>
-                <th>Skor AI (Suspicion)</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in results %}
-            <tr>
-                <td>{{ row.nim }}</td>
-                <td>{{ row.nama_lengkap }}</td>
-                <td>{{ row.violation_count }}</td>
-                <td>{{ "%.2f"|format(row.avg_ai_score) if row.avg_ai_score else "0.00" }}</td>
-                <td>
-                    {% if row.violation_count > 2 or (row.avg_ai_score and row.avg_ai_score > 0.7) %}
-                    <span class="suspicious">Mencurigakan</span>
-                    {% else %}
-                    <span class="safe">Normal</span>
-                    {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <p style="margin-top: 2rem;"><a href="{{ url_for('login') }}">Kembali ke Login</a></p>
-</body>
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="logo-icon">🎓</div>
+            <div>
+                <div class="logo-text">CBT Monitoring</div>
+                <div class="logo-sub">Admin Dashboard</div>
+            </div>
+            <div class="breadcrumb">
+                <span>Dashboard</span>
+                <span>›</span>
+                <span>Analisis Peserta</span>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <div class="admin-badge">🛡️ Administrator</div>
+            <a href="{{ url_for('login') }}" class="btn-logout">⬅ Logout</a>
+        </div>
+    </header>
 
+    <div class="page">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="nav-section">
+                <div class="nav-section-label">Utama</div>
+                <a class="nav-item active" href="#">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">👥</span> Peserta
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">📝</span> Soal Ujian
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-label">Analisis</div>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">🤖</span> Model AI
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">⚠️</span> Pelanggaran
+                </a>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">📈</span> Laporan
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-label">Sistem</div>
+                <a class="nav-item" href="#">
+                    <span class="nav-icon">⚙️</span> Pengaturan
+                </a>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <div class="page-header">
+                <div>
+                    <div class="page-title">Daftar Peserta & Analisis Kecurangan</div>
+                    <div class="page-desc">Monitoring real-time aktivitas dan skor kecurangan seluruh peserta ujian</div>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline">📥 Ekspor CSV</button>
+                    <button class="btn btn-primary">🔄 Refresh Data</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card blue">
+                    <div class="stat-info">
+                        <div class="stat-label">Total Peserta</div>
+                        <div class="stat-val">{{ results | length }}</div>
+                        <div class="stat-sub">Terdaftar dalam sesi</div>
+                    </div>
+                    <div class="stat-icon blue">👥</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-info">
+                        <div class="stat-label">Status Normal</div>
+                        <div class="stat-val">
+                            {{ results | selectattr('violation_count', 'le', 2) | list | length }}
+                        </div>
+                        <div class="stat-sub">Peserta aman</div>
+                    </div>
+                    <div class="stat-icon green">✅</div>
+                </div>
+                <div class="stat-card red">
+                    <div class="stat-info">
+                        <div class="stat-label">Mencurigakan</div>
+                        <div class="stat-val">
+                            {{ results | selectattr('violation_count', 'gt', 2) | list | length }}
+                        </div>
+                        <div class="stat-sub">Perlu ditindak lanjut</div>
+                    </div>
+                    <div class="stat-icon red">⚠️</div>
+                </div>
+                <div class="stat-card yellow">
+                    <div class="stat-info">
+                        <div class="stat-label">Total Pelanggaran</div>
+                        <div class="stat-val">
+                            {{ results | sum(attribute='violation_count') }}
+                        </div>
+                        <div class="stat-sub">Dari semua peserta</div>
+                    </div>
+                    <div class="stat-icon yellow">🔔</div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-section">
+                <div class="table-header">
+                    <div>
+                        <div class="table-title">Data Peserta Ujian</div>
+                        <div class="table-subtitle">Menampilkan {{ results | length }} peserta</div>
+                    </div>
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" placeholder="Cari nama atau NIM..." oninput="filterTable()">
+                    </div>
+                </div>
+
+                <table id="participantTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Peserta</th>
+                            <th>NIM</th>
+                            <th>Pelanggaran Rule</th>
+                            <th>Skor AI</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        {% for row in results %}
+                        {% set idx = loop.index %}
+                        {% set colors = ['#6366f1','#8b5cf6','#06b6d4','#10b981','#f59e0b','#ef4444'] %}
+                        {% set color = colors[(loop.index0 % 6)] %}
+                        {% set is_suspicious = row.violation_count > 2 or (row.avg_ai_score and row.avg_ai_score > 0.7) %}
+                        {% set ai_score = row.avg_ai_score if row.avg_ai_score else 0 %}
+                        <tr>
+                            <td style="color:var(--text-muted); font-size:0.78rem;">{{ idx }}</td>
+                            <td>
+                                <div class="student-cell">
+                                    <div class="avatar" style="background: {{ color }};">
+                                        {{ row.nama_lengkap[0].upper() if row.nama_lengkap else '?' }}
+                                    </div>
+                                    <div>
+                                        <div class="student-name">{{ row.nama_lengkap }}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="nim-badge">{{ row.nim }}</span>
+                            </td>
+                            <td>
+                                <span style="font-weight:700; color: {% if row.violation_count > 2 %}var(--danger){% elif row.violation_count > 0 %}var(--warning){% else %}var(--success){% endif %};">
+                                    {{ row.violation_count }}
+                                </span>
+                                <span style="font-size:0.75rem; color:var(--text-muted);"> pelanggaran</span>
+                            </td>
+                            <td>
+                                <div class="score-bar-wrap">
+                                    <div class="score-bar-bg">
+                                        <div class="score-bar-fill" style="width: {{ (ai_score * 100)|round|int }}%; background: {% if ai_score > 0.7 %}var(--danger){% elif ai_score > 0.4 %}var(--warning){% else %}var(--success){% endif %};"></div>
+                                    </div>
+                                    <span class="score-text" style="color: {% if ai_score > 0.7 %}var(--danger){% elif ai_score > 0.4 %}var(--warning){% else %}var(--success){% endif %};">
+                                        {{ "%.2f"|format(ai_score) }}
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                {% if is_suspicious %}
+                                <span class="badge badge-danger">⚠️ Mencurigakan</span>
+                                {% elif row.violation_count > 0 %}
+                                <span class="badge badge-warn">⚡ Perhatian</span>
+                                {% else %}
+                                <span class="badge badge-success">✅ Normal</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <button class="action-btn">Detail →</button>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr id="emptyRow">
+                            <td colspan="7">
+                                <div class="empty-state" style="display:block;">
+                                    <div class="empty-icon">📭</div>
+                                    <div class="empty-title">Belum ada data peserta</div>
+                                    <div class="empty-desc">Data akan muncul setelah peserta mulai ujian</div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <span>Menampilkan <strong>{{ results | length }}</strong> peserta</span>
+                    <div class="pagination">
+                        <button class="page-btn">‹</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">›</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function filterTable() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const rows = document.querySelectorAll('#tableBody tr');
+            rows.forEach(row => {
+                if (!row.id) {
+                    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>

@@ -14,24 +14,44 @@
   --warning: #f59e0b;
 }
 
-* {
+/* ── Reset & Base ── */
+*, *::before, *::after {
   box-sizing: border-box;
-  transition: all 0.2s ease;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+              color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
-  background-image:
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 180, 219, 0.15) 0, transparent 50%);
-  color: var(--text-main);
+  width: 100%;
   min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 0% 0%, rgba(99, 102, 241, 0.18) 0, transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(0, 180, 219, 0.18) 0, transparent 55%);
+  background-attachment: fixed;
+  color: var(--text-main);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Glassmorphism utility */
+/* React root — wajib full width & height */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Glassmorphism utility ── */
 .glass {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -40,13 +60,17 @@ body {
   border-radius: 16px;
 }
 
+/* ── Full-page centered layout (Login, dll) ── */
 .centered-layout {
+  flex: 1;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
+
 
 /* Typography */
 h1,

@@ -1,0 +1,1879 @@
+[20/4/2026, 12.44.03] [INFO ] [SERVER      ] CBT Server berjalan di port 5000 
+[20/4/2026, 12.44.03] [INFO ] [SERVER      ] Log file: D:\Faisal\laragon\www\skripsi\backend\logs\server-2026-04-20.log 
+[20/4/2026, 12.44.03] [INFO ] [SERVER      ] Fitur aktif: JWT + bcrypt + Rate Limit + Helmet + RBAC 
+[20/4/2026, 12.44.03] [INFO ] [SERVER      ] Database: MySQL (Sequelize alter:true) — sync berhasil 
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] Auto-repair applied for admin: ["is_registered","password_hash","max_attempts"]
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 12.44.24] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] POST /api/login → 200 | 205ms
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 76ms
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 83ms
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 111ms
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 117ms
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 111ms
+[20/4/2026, 12.44.24] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 135ms
+[20/4/2026, 12.44.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.44.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.44.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.44.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.44.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.44.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.44.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.44.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.44.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.44.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 12.44.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 12.44.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 12.44.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.44.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.44.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.44.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.45.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.45.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 23ms
+[20/4/2026, 12.45.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.45.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 12.45.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.45.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.45.20] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.20] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.45.21] [INFO ] [REQUEST     ] PUT /api/admin/students/2 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.21] [INFO ] [RESPONSE    ] PUT /api/admin/students/2 → 200 | 8ms
+[20/4/2026, 12.45.21] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.21] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.21] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 22ms
+[20/4/2026, 12.45.21] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 12.45.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[20/4/2026, 12.45.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.45.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 18ms
+[20/4/2026, 12.45.40] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.40] [INFO ] [LOGIN       ] Upaya login NIM: "faisal" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.40] [INFO ] [LOGIN       ] User found: NO | NIM: faisal | isSpecial: false
+[20/4/2026, 12.45.40] [WARN ] [LOGIN       ] Login GAGAL - NIM tidak ditemukan: faisal 
+[20/4/2026, 12.45.40] [WARN ] [RESPONSE    ] POST /api/login → 401 | 5ms
+[20/4/2026, 12.45.40] [WARN ] [DETAIL      ] NIM tidak terdaftar. Hubungi admin untuk pendaftaran. 
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 12.45.45] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 12.45.45] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 12.45.45] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 12.45.45] [INFO ] [RESPONSE    ] POST /api/login → 200 | 85ms
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 50ms
+[20/4/2026, 12.45.45] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 63ms
+[20/4/2026, 12.45.45] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 65ms
+[20/4/2026, 12.45.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 94ms
+[20/4/2026, 12.45.46] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 103ms
+[20/4/2026, 12.45.46] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 98ms
+[20/4/2026, 12.45.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.45.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.45.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.45.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.45.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.46.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.46.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.03] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.03] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 83ms
+[20/4/2026, 12.46.03] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 89ms
+[20/4/2026, 12.46.03] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 85ms
+[20/4/2026, 12.46.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.46.15] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.15] [INFO ] [LOGIN       ] Upaya login NIM: "22533568" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.15] [INFO ] [LOGIN       ] User found: YES | NIM: 22533568 | isSpecial: false
+[20/4/2026, 12.46.15] [INFO ] [LOGIN       ] Verifying password for: 22533568 | has_hash: false
+[20/4/2026, 12.46.15] [WARN ] [LOGIN       ] Login GAGAL - Tidak ada password_hash: 22533568 
+[20/4/2026, 12.46.15] [WARN ] [RESPONSE    ] POST /api/login → 401 | 3ms
+[20/4/2026, 12.46.15] [WARN ] [DETAIL      ] Akun tidak memiliki password. Hubungi admin. 
+[20/4/2026, 12.46.26] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.26] [INFO ] [LOGIN       ] Upaya login NIM: "faisal" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.26] [INFO ] [LOGIN       ] User found: NO | NIM: faisal | isSpecial: false
+[20/4/2026, 12.46.26] [WARN ] [LOGIN       ] Login GAGAL - NIM tidak ditemukan: faisal 
+[20/4/2026, 12.46.26] [WARN ] [RESPONSE    ] POST /api/login → 401 | 2ms
+[20/4/2026, 12.46.26] [WARN ] [DETAIL      ] NIM tidak terdaftar. Hubungi admin untuk pendaftaran. 
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 12.46.41] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 12.46.41] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 12.46.41] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] POST /api/login → 200 | 95ms
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 42ms
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 55ms
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 56ms
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 54ms
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 69ms
+[20/4/2026, 12.46.41] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 78ms
+[20/4/2026, 12.46.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 23ms
+[20/4/2026, 12.46.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 19ms
+[20/4/2026, 12.46.50] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.50] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.46.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.46.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.46.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.46.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.47.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.47.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.47.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.47.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.47.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.47.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.47.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.47.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.47.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.47.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 12.47.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.47.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.47.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.47.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 12.47.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.47.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.47.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.47.53] [INFO ] [REQUEST     ] POST /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.53] [WARN ] [RESPONSE    ] POST /api/admin/students → 409 | 3ms
+[20/4/2026, 12.47.53] [WARN ] [DETAIL      ] NIM "22533568" sudah terdaftar 
+[20/4/2026, 12.47.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.47.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.47.59] [INFO ] [REQUEST     ] POST /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.59] [INFO ] [RESPONSE    ] POST /api/admin/students → 200 | 89ms
+[20/4/2026, 12.47.59] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.59] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 7ms
+[20/4/2026, 12.47.59] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.47.59] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 2ms
+[20/4/2026, 12.48.00] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.00] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 17ms
+[20/4/2026, 12.48.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.48.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.48.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.48.19] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.19] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.19] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 12.48.19] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 12.48.19] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 12.48.19] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 12.48.19] [INFO ] [RESPONSE    ] POST /api/login → 200 | 81ms
+[20/4/2026, 12.48.19] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.19] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.19] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 21ms
+[20/4/2026, 12.48.19] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 22ms
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 12.48.29] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 12.48.29] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 12.48.29] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] POST /api/login → 200 | 78ms
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 39ms
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 41ms
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 51ms
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 62ms
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 63ms
+[20/4/2026, 12.48.29] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 67ms
+[20/4/2026, 12.48.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.48.35] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.35] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 12.48.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.48.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 40ms
+[20/4/2026, 12.48.42] [INFO ] [REQUEST     ] POST /api/admin/enrollments | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.42] [INFO ] [RESPONSE    ] POST /api/admin/enrollments → 200 | 14ms
+[20/4/2026, 12.48.42] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.42] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 5ms
+[20/4/2026, 12.48.43] [INFO ] [REQUEST     ] POST /api/admin/enrollments | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.43] [INFO ] [RESPONSE    ] POST /api/admin/enrollments → 200 | 5ms
+[20/4/2026, 12.48.43] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.43] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 5ms
+[20/4/2026, 12.48.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[20/4/2026, 12.48.46] [INFO ] [REQUEST     ] POST /api/admin/enrollments | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.46] [INFO ] [RESPONSE    ] POST /api/admin/enrollments → 200 | 8ms
+[20/4/2026, 12.48.46] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.46] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 8ms
+[20/4/2026, 12.48.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.48.50] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.50] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.48.52] [INFO ] [REQUEST     ] PUT /api/admin/enrollments/1 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.53] [INFO ] [RESPONSE    ] PUT /api/admin/enrollments/1 → 200 | 25ms
+[20/4/2026, 12.48.53] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.53] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 12ms
+[20/4/2026, 12.48.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.48.56] [INFO ] [REQUEST     ] PUT /api/admin/enrollments/2 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.56] [INFO ] [RESPONSE    ] PUT /api/admin/enrollments/2 → 200 | 6ms
+[20/4/2026, 12.48.56] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.56] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 11ms
+[20/4/2026, 12.48.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.48.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.48.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.49.01] [INFO ] [REQUEST     ] PUT /api/admin/enrollments/3 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.01] [INFO ] [RESPONSE    ] PUT /api/admin/enrollments/3 → 200 | 12ms
+[20/4/2026, 12.49.01] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.01] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 14ms
+[20/4/2026, 12.49.01] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.01] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 14ms
+[20/4/2026, 12.49.01] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.01] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 12.49.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.49.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.49.05] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.05] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.05] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 9ms
+[20/4/2026, 12.49.05] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 8ms
+[20/4/2026, 12.49.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 18ms
+[20/4/2026, 12.49.10] [INFO ] [REQUEST     ] PUT /api/admin/students/8 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.10] [INFO ] [RESPONSE    ] PUT /api/admin/students/8 → 200 | 3ms
+[20/4/2026, 12.49.10] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.10] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.10] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 8ms
+[20/4/2026, 12.49.10] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 6ms
+[20/4/2026, 12.49.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.49.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.49.23] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.23] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.23] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 12.49.23] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 12.49.23] [INFO ] [LOGIN       ] Password check result: INVALID | NIM: 22533567
+[20/4/2026, 12.49.23] [WARN ] [LOGIN       ] Login GAGAL - Password salah: 22533567 
+[20/4/2026, 12.49.23] [WARN ] [RESPONSE    ] POST /api/login → 401 | 89ms
+[20/4/2026, 12.49.23] [WARN ] [DETAIL      ] Password salah. 
+[20/4/2026, 12.49.30] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.30] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.30] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 12.49.30] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 12.49.30] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 12.49.30] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 12.49.30] [INFO ] [RESPONSE    ] POST /api/login → 200 | 82ms
+[20/4/2026, 12.49.30] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.30] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.30] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 18ms
+[20/4/2026, 12.49.30] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 17ms
+[20/4/2026, 12.49.34] [INFO ] [REQUEST     ] POST /api/start-exam | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.34] [INFO ] [RESPONSE    ] POST /api/start-exam → 200 | 8ms
+[20/4/2026, 12.49.34] [INFO ] [REQUEST     ] GET /api/questions | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.35] [INFO ] [RESPONSE    ] GET /api/questions → 200 | 12ms
+[20/4/2026, 12.49.38] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.38] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.49.41] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.41] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.49.44] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.44] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 5ms
+[20/4/2026, 12.49.47] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.47] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.49.49] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.49] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 474ms
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.50] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.50] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 497ms
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.50] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 489ms
+[20/4/2026, 12.49.50] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.51] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 502ms
+[20/4/2026, 12.49.51] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 462ms
+[20/4/2026, 12.49.51] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 419ms
+[20/4/2026, 12.49.53] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.53] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.49.55] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.55] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 425ms
+[20/4/2026, 12.49.56] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.56] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 68ms
+[20/4/2026, 12.49.59] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.49.59] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.02] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.02] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.05] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.05] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.08] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.08] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 5ms
+[20/4/2026, 12.50.11] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.11] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 5ms
+[20/4/2026, 12.50.12] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.12] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.12] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 395ms
+[20/4/2026, 12.50.12] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 343ms
+[20/4/2026, 12.50.14] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.14] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.50.14] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.14] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.14] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 375ms
+[20/4/2026, 12.50.15] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 348ms
+[20/4/2026, 12.50.17] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.17] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.50.17] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.17] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.17] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 380ms
+[20/4/2026, 12.50.17] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 334ms
+[20/4/2026, 12.50.19] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.20] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 634ms
+[20/4/2026, 12.50.20] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.20] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 18ms
+[20/4/2026, 12.50.22] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.22] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.23] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 412ms
+[20/4/2026, 12.50.23] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 329ms
+[20/4/2026, 12.50.23] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.23] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.50.26] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.26] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 16ms
+[20/4/2026, 12.50.29] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.29] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.29] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.29] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.30] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 432ms
+[20/4/2026, 12.50.30] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 341ms
+[20/4/2026, 12.50.33] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.33] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.36] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.36] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.39] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.39] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.50.42] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.42] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 4ms
+[20/4/2026, 12.50.45] [INFO ] [REQUEST     ] GET /api/check-status/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.45] [INFO ] [RESPONSE    ] GET /api/check-status/50 → 200 | 3ms
+[20/4/2026, 12.50.47] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.47] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.50.47] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 12.50.47] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 16ms
+[20/4/2026, 12.51.03] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.51.03] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.51.03] [WARN ] [RESPONSE    ] POST /api/login → 429 | 1ms
+[20/4/2026, 12.51.03] [WARN ] [DETAIL      ] Terlalu banyak percobaan login. Coba lagi dalam 15 menit. 
+[20/4/2026, 12.58.01] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.01] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.01] [WARN ] [RESPONSE    ] POST /api/login → 429 | 1ms
+[20/4/2026, 12.58.01] [WARN ] [DETAIL      ] Terlalu banyak percobaan login. Coba lagi dalam 15 menit. 
+[20/4/2026, 12.58.02] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.02] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.02] [WARN ] [RESPONSE    ] POST /api/login → 429 | 1ms
+[20/4/2026, 12.58.02] [WARN ] [DETAIL      ] Terlalu banyak percobaan login. Coba lagi dalam 15 menit. 
+[20/4/2026, 12.58.13] [INFO ] [SERVER      ] CBT Server berjalan di port 5000 
+[20/4/2026, 12.58.13] [INFO ] [SERVER      ] Log file: D:\Faisal\laragon\www\skripsi\backend\logs\server-2026-04-20.log 
+[20/4/2026, 12.58.13] [INFO ] [SERVER      ] Fitur aktif: JWT + bcrypt + Rate Limit + Helmet + RBAC 
+[20/4/2026, 12.58.13] [INFO ] [SERVER      ] Database: MySQL (Sequelize alter:true) — sync berhasil 
+[20/4/2026, 12.58.19] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.19] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.19] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 12.58.19] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 12.58.19] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 12.58.19] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 12.58.19] [INFO ] [RESPONSE    ] POST /api/login → 200 | 108ms
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 54ms
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 64ms
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 64ms
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 96ms
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 118ms
+[20/4/2026, 12.58.20] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 121ms
+[20/4/2026, 12.58.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 23ms
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 40ms
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 68ms
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/admin/students | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 25ms
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 25ms
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/admin/students → 200 | 20ms
+[20/4/2026, 12.58.26] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 18ms
+[20/4/2026, 12.58.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.58.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 19ms
+[20/4/2026, 12.58.35] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.35] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.58.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 20ms
+[20/4/2026, 12.58.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.58.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 12.58.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.58.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.58.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 12.58.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.58.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 12.59.00] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.00] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 12.59.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 12.59.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.59.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 12.59.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.59.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 12.59.50] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.50] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 12.59.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 12.59.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 12.59.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 12.59.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.00.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.00.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.00.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.00.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.00.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.00.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.00.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.00.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.00.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.00.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.00.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.00.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.01.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.01.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.01.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.01.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.01.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.01.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.01.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.01.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.02.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.02.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.02.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 13.02.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.02.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.02.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.02.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.02.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.02.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.02.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.02.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.03.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.03.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.03.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.03.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.03.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 13.03.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.03.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.04.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.04.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.04.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.04.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.04.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.04.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.04.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.04.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.05.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.05.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.05.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.05.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.05.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.05.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 13.06.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 17ms
+[20/4/2026, 13.06.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.06.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.06.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.06.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.06.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.06.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.07.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.07.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.07.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.07.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.07.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.07.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.07.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.07.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.07.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.08.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.08.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.08.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.08.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.08.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.08.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.08.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.08.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.09.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.09.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.09.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.09.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.09.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.09.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.09.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.09.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.10.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.10.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.10.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.10.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.10.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.10.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.10.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.10.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.10.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.10.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.11.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.11.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.11.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.11.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.11.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.11.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.11.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.11.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.11.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.11.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.00] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.00] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.12.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.12.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.12.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.12.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.12.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.12.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 13.12.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.12.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.12.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.12.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.13.00] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.00] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.13.01] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.01] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.01] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.01] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.01] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 15ms
+[20/4/2026, 13.13.01] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 13.13.05] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.05] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.05] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 6ms
+[20/4/2026, 13.13.05] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 5ms
+[20/4/2026, 13.13.07] [INFO ] [REQUEST     ] GET /api/admin/stats | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.07] [INFO ] [REQUEST     ] GET /api/admin/logs | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.07] [INFO ] [REQUEST     ] GET /api/admin/stats | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.07] [INFO ] [REQUEST     ] GET /api/admin/logs | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.10] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.10] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.10] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 6ms
+[20/4/2026, 13.13.10] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 13.13.15] [INFO ] [REQUEST     ] DELETE /api/exams/3 | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.15] [INFO ] [RESPONSE    ] DELETE /api/exams/3 → 200 | 29ms
+[20/4/2026, 13.13.15] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.15] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 13.13.18] [INFO ] [REQUEST     ] DELETE /api/exams/2 | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.18] [INFO ] [RESPONSE    ] DELETE /api/exams/2 → 200 | 7ms
+[20/4/2026, 13.13.18] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.18] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 3ms
+[20/4/2026, 13.13.22] [INFO ] [REQUEST     ] DELETE /api/exams/1 | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.22] [INFO ] [RESPONSE    ] DELETE /api/exams/1 → 200 | 9ms
+[20/4/2026, 13.13.22] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.22] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 2ms
+[20/4/2026, 13.13.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 22ms
+[20/4/2026, 13.13.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 55ms
+[20/4/2026, 13.13.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 17ms
+[20/4/2026, 13.13.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 13.13.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.13.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.13.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.13.45] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.45] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.13.48] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.48] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.13.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.13.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.13.57] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.13.57] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 26ms
+[20/4/2026, 13.14.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.14.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.14.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.14.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.39] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.14.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.14.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.14.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 13.14.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.14.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.15.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.15.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 13.15.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 13.15.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.15.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 13.15.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 13.15.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.15.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.15.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 13.15.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 13.15.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 21.09.26] [ERROR] [SERVER      ] Database sync GAGAL:  
+[20/4/2026, 21.09.50] [INFO ] [SERVER      ] CBT Server berjalan di port 5000 
+[20/4/2026, 21.09.50] [INFO ] [SERVER      ] Log file: D:\Faisal\laragon\www\skripsi\backend\logs\server-2026-04-20.log 
+[20/4/2026, 21.09.50] [INFO ] [SERVER      ] Fitur aktif: JWT + bcrypt + Rate Limit + Helmet + RBAC 
+[20/4/2026, 21.09.50] [INFO ] [SERVER      ] Database: MySQL (Sequelize alter:true) — sync berhasil 
+[20/4/2026, 21.10.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.29] [WARN ] [RESPONSE    ] GET /api/dashboard → 401 | 20ms
+[20/4/2026, 21.10.29] [WARN ] [DETAIL      ] Token tidak valid atau sudah kadaluarsa. 
+[20/4/2026, 21.10.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.29] [WARN ] [RESPONSE    ] GET /api/dashboard → 401 | 4ms
+[20/4/2026, 21.10.29] [WARN ] [DETAIL      ] Token tidak valid atau sudah kadaluarsa. 
+[20/4/2026, 21.10.37] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.37] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.37] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 21.10.37] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 21.10.38] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 21.10.38] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 21.10.38] [INFO ] [RESPONSE    ] POST /api/login → 200 | 335ms
+[20/4/2026, 21.10.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 115ms
+[20/4/2026, 21.10.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 186ms
+[20/4/2026, 21.10.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 50ms
+[20/4/2026, 21.10.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 43ms
+[20/4/2026, 21.10.44] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.44] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.44] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.45] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 26ms
+[20/4/2026, 21.10.45] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 44ms
+[20/4/2026, 21.10.45] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 32ms
+[20/4/2026, 21.10.45] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.10.45] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.11.00] [INFO ] [REQUEST     ] DELETE /api/admin/users/5 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.00] [INFO ] [ADMIN       ] User dihapus: admin\ (student) 
+[20/4/2026, 21.11.00] [INFO ] [RESPONSE    ] DELETE /api/admin/users/5 → 200 | 38ms
+[20/4/2026, 21.11.00] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.00] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.00] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 15ms
+[20/4/2026, 21.11.00] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 18ms
+[20/4/2026, 21.11.12] [INFO ] [REQUEST     ] DELETE /api/admin/users/2 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.12] [INFO ] [ADMIN       ] User dihapus: 22533568 (student) 
+[20/4/2026, 21.11.12] [INFO ] [RESPONSE    ] DELETE /api/admin/users/2 → 200 | 23ms
+[20/4/2026, 21.11.12] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.12] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 13ms
+[20/4/2026, 21.11.12] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.12] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 21.11.18] [INFO ] [REQUEST     ] DELETE /api/admin/users/3 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.18] [INFO ] [ADMIN       ] User dihapus: ghfir (student) 
+[20/4/2026, 21.11.18] [INFO ] [RESPONSE    ] DELETE /api/admin/users/3 → 200 | 14ms
+[20/4/2026, 21.11.18] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.18] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.18] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 19ms
+[20/4/2026, 21.11.18] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 21.11.22] [INFO ] [REQUEST     ] DELETE /api/admin/users/7 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.22] [INFO ] [ADMIN       ] User dihapus: uji (student) 
+[20/4/2026, 21.11.22] [INFO ] [RESPONSE    ] DELETE /api/admin/users/7 → 200 | 23ms
+[20/4/2026, 21.11.22] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.22] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.22] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 23ms
+[20/4/2026, 21.11.22] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 21ms
+[20/4/2026, 21.11.25] [INFO ] [REQUEST     ] DELETE /api/admin/users/6 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.25] [INFO ] [ADMIN       ] User dihapus: ujian (student) 
+[20/4/2026, 21.11.25] [INFO ] [RESPONSE    ] DELETE /api/admin/users/6 → 200 | 24ms
+[20/4/2026, 21.11.25] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.25] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.25] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 11ms
+[20/4/2026, 21.11.25] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 10ms
+[20/4/2026, 21.11.51] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.51] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.51] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 23ms
+[20/4/2026, 21.11.51] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 17ms
+[20/4/2026, 21.11.53] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.53] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 6ms
+[20/4/2026, 21.11.53] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.53] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 5ms
+[20/4/2026, 21.11.53] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.53] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.11.53] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 17ms
+[20/4/2026, 21.11.53] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 16ms
+[20/4/2026, 21.12.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 43ms
+[20/4/2026, 21.12.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 45ms
+[20/4/2026, 21.12.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.12.27] [INFO ] [REQUEST     ] GET /api/admin/evidence/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.27] [INFO ] [REQUEST     ] GET /api/admin/evidence/50 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.27] [INFO ] [RESPONSE    ] GET /api/admin/evidence/50 → 200 | 24ms
+[20/4/2026, 21.12.27] [INFO ] [RESPONSE    ] GET /api/admin/evidence/50 → 200 | 34ms
+[20/4/2026, 21.12.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 33ms
+[20/4/2026, 21.12.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 36ms
+[20/4/2026, 21.12.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 26ms
+[20/4/2026, 21.12.36] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.36] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[20/4/2026, 21.12.39] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 31ms
+[20/4/2026, 21.12.42] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.42] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 21ms
+[20/4/2026, 21.12.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 23ms
+[20/4/2026, 21.12.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 28ms
+[20/4/2026, 21.12.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 28ms
+[20/4/2026, 21.12.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 27ms
+[20/4/2026, 21.12.58] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.12.58] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 30ms
+[20/4/2026, 21.13.01] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.01] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 32ms
+[20/4/2026, 21.13.04] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.04] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 26ms
+[20/4/2026, 21.13.07] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.07] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 33ms
+[20/4/2026, 21.13.10] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.10] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.13.13] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.13] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.13.16] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.16] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.19] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.19] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.13.22] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.22] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.13.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.13.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.13.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.35] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.35] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.13.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.13.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.50] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.50] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 21.13.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.13.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.13.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.13.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 21.14.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.14.05] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.05] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.14.08] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.08] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.14.11] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.11] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.14.14] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.14] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.14.17] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.17] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.20] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.20] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.23] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.23] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 21.14.26] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.26] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.29] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.29] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.14.32] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.32] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.14.35] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.35] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 11ms
+[20/4/2026, 21.14.38] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.38] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.41] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.41] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 16ms
+[20/4/2026, 21.14.44] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.44] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.47] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.47] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.50] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.50] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 21.14.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.14.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.14.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.14.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.55] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.14.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.14.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.15.00] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.00] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.15.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.15.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.15.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 21.15.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.15.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.15.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.53] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.53] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.56] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.15.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.15.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.16.03] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.03] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.16.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.16.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.16.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.16.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.16.24] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.24] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.16.27] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.27] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.16.30] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.30] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.33] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.33] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.16.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.16.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.49] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.49] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.16.52] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.52] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.16.55] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.56] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.16.59] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.16.59] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.17.02] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.02] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.17.06] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.06] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.17.09] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.09] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 7ms
+[20/4/2026, 21.17.12] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.12] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.17.15] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.15] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 8ms
+[20/4/2026, 21.17.18] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.18] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.17.21] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.21] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 10ms
+[20/4/2026, 21.17.25] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.25] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.17.28] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.28] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 9ms
+[20/4/2026, 21.17.31] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.31] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 6ms
+[20/4/2026, 21.17.34] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.34] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 5ms
+[20/4/2026, 21.17.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 4ms
+[20/4/2026, 21.17.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 12ms
+[20/4/2026, 21.17.41] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.41] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.41] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 15ms
+[20/4/2026, 21.17.41] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 13ms
+[20/4/2026, 21.17.43] [INFO ] [REQUEST     ] GET /api/admin/stats | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.43] [INFO ] [REQUEST     ] GET /api/admin/stats | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.43] [INFO ] [REQUEST     ] GET /api/admin/logs | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.43] [INFO ] [RESPONSE    ] GET /api/admin/logs → 200 | 10ms
+[20/4/2026, 21.17.43] [INFO ] [REQUEST     ] GET /api/admin/logs | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.17.43] [INFO ] [RESPONSE    ] GET /api/admin/logs → 200 | 6ms
+[20/4/2026, 21.17.43] [INFO ] [RESPONSE    ] GET /api/admin/stats → 200 | 101ms
+[20/4/2026, 21.17.43] [INFO ] [RESPONSE    ] GET /api/admin/stats → 200 | 85ms
+[20/4/2026, 21.18.15] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.15] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.15] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 21.18.15] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 21.18.16] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 21.18.16] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 21.18.16] [INFO ] [RESPONSE    ] POST /api/login → 200 | 278ms
+[20/4/2026, 21.18.16] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.16] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.16] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 21.18.16] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 12ms
+[20/4/2026, 21.18.23] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.23] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.23] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 12ms
+[20/4/2026, 21.18.23] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.18.25] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.25] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.25] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.18.25] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 12ms
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 13ms
+[20/4/2026, 21.18.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.18.28] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.28] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.28] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.18.28] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 8ms
+[20/4/2026, 21.18.40] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.40] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.40] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 21.18.40] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 21.18.40] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 21.18.40] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 21.18.40] [INFO ] [RESPONSE    ] POST /api/login → 200 | 262ms
+[20/4/2026, 21.18.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.40] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 27ms
+[20/4/2026, 21.18.40] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 35ms
+[20/4/2026, 21.18.43] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.43] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 15ms
+[20/4/2026, 21.18.46] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.46] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 13ms
+[20/4/2026, 21.18.48] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.48] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 5ms
+[20/4/2026, 21.18.48] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.48] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 7ms
+[20/4/2026, 21.18.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.51] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 18ms
+[20/4/2026, 21.18.51] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 24ms
+[20/4/2026, 21.18.54] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.54] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 14ms
+[20/4/2026, 21.18.55] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.55] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.55] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.55] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.18.55] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 36ms
+[20/4/2026, 21.18.55] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 31ms
+[20/4/2026, 21.18.55] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 34ms
+[20/4/2026, 21.18.55] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 30ms
+[20/4/2026, 21.23.15] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.15] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.15] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 24ms
+[20/4/2026, 21.23.15] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 18ms
+[20/4/2026, 21.23.26] [INFO ] [REQUEST     ] POST /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.26] [INFO ] [RESPONSE    ] POST /api/exams → 200 | 39ms
+[20/4/2026, 21.23.26] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.26] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 21.23.28] [INFO ] [REQUEST     ] GET /api/admin/questions/4 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.28] [INFO ] [RESPONSE    ] GET /api/admin/questions/4 → 200 | 8ms
+[20/4/2026, 21.23.55] [INFO ] [REQUEST     ] POST /api/admin/upload-questions | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.55] [INFO ] [RESPONSE    ] POST /api/admin/upload-questions → 200 | 158ms
+[20/4/2026, 21.23.55] [INFO ] [REQUEST     ] GET /api/admin/questions/4 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.23.55] [INFO ] [RESPONSE    ] GET /api/admin/questions/4 → 200 | 11ms
+[20/4/2026, 21.24.06] [INFO ] [REQUEST     ] PUT /api/exams/4 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.06] [INFO ] [RESPONSE    ] PUT /api/exams/4 → 200 | 19ms
+[20/4/2026, 21.24.06] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.06] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 5ms
+[20/4/2026, 21.24.12] [INFO ] [REQUEST     ] PUT /api/exams/4 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.12] [INFO ] [RESPONSE    ] PUT /api/exams/4 → 200 | 15ms
+[20/4/2026, 21.24.12] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.12] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 8ms
+[20/4/2026, 21.24.24] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.24] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.24] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 21.24.24] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 21.24.24] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 21.24.24] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 21.24.24] [INFO ] [RESPONSE    ] POST /api/login → 200 | 250ms
+[20/4/2026, 21.24.24] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.24] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.24] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 28ms
+[20/4/2026, 21.24.24] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 24ms
+[20/4/2026, 21.24.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.27] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.24.27] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 12ms
+[20/4/2026, 21.24.36] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.36] [INFO ] [LOGIN       ] Upaya login NIM: "admin" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.36] [INFO ] [LOGIN       ] User found: YES | NIM: admin | isSpecial: true
+[20/4/2026, 21.24.36] [INFO ] [LOGIN       ] Verifying password for: admin | has_hash: true
+[20/4/2026, 21.24.37] [INFO ] [LOGIN       ] Password check result: VALID | NIM: admin
+[20/4/2026, 21.24.37] [INFO ] [LOGIN       ] Login BERHASIL: admin | role: admin | user_id: 1
+[20/4/2026, 21.24.37] [INFO ] [RESPONSE    ] POST /api/login → 200 | 235ms
+[20/4/2026, 21.24.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.37] [INFO ] [REQUEST     ] GET /api/dashboard | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 28ms
+[20/4/2026, 21.24.37] [INFO ] [RESPONSE    ] GET /api/dashboard → 200 | 29ms
+[20/4/2026, 21.24.39] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.39] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.39] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 10ms
+[20/4/2026, 21.24.39] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 9ms
+[20/4/2026, 21.24.42] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.42] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 4ms
+[20/4/2026, 21.24.42] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.42] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 5ms
+[20/4/2026, 21.24.42] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.42] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.42] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 18ms
+[20/4/2026, 21.24.42] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 21ms
+[20/4/2026, 21.24.47] [INFO ] [REQUEST     ] POST /api/admin/enrollments | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.48] [INFO ] [RESPONSE    ] POST /api/admin/enrollments → 200 | 21ms
+[20/4/2026, 21.24.48] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.48] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 9ms
+[20/4/2026, 21.24.54] [INFO ] [REQUEST     ] PUT /api/admin/enrollments/4 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.54] [INFO ] [RESPONSE    ] PUT /api/admin/enrollments/4 → 200 | 27ms
+[20/4/2026, 21.24.54] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.54] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 15ms
+[20/4/2026, 21.24.54] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.54] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.54] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 16ms
+[20/4/2026, 21.24.54] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 12ms
+[20/4/2026, 21.24.59] [INFO ] [REQUEST     ] GET /api/admin/all-users | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.59] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.24.59] [INFO ] [RESPONSE    ] GET /api/admin/all-users → 200 | 13ms
+[20/4/2026, 21.24.59] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms
+[20/4/2026, 21.25.07] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.07] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.07] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 21.25.07] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 21.25.07] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 21.25.07] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 21.25.07] [INFO ] [RESPONSE    ] POST /api/login → 200 | 237ms
+[20/4/2026, 21.25.07] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.07] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.07] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 19ms
+[20/4/2026, 21.25.07] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 15ms
+[20/4/2026, 21.25.13] [INFO ] [REQUEST     ] POST /api/start-exam | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.14] [INFO ] [RESPONSE    ] POST /api/start-exam → 200 | 20ms
+[20/4/2026, 21.25.14] [INFO ] [REQUEST     ] GET /api/questions | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.14] [INFO ] [RESPONSE    ] GET /api/questions → 200 | 15ms
+[20/4/2026, 21.25.17] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.17] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.25.20] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.20] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 10ms
+[20/4/2026, 21.25.23] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.23] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 6ms
+[20/4/2026, 21.25.26] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.26] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 5ms
+[20/4/2026, 21.25.29] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.29] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.25.32] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.32] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 9ms
+[20/4/2026, 21.25.35] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.35] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 8ms
+[20/4/2026, 21.25.35] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.37] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.37] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.37] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.38] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.38] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 8ms
+[20/4/2026, 21.25.38] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.38] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.38] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 888ms
+[20/4/2026, 21.25.38] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1600ms
+[20/4/2026, 21.25.38] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1335ms
+[20/4/2026, 21.25.38] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 3182ms
+[20/4/2026, 21.25.38] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.38] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.39] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 959ms
+[20/4/2026, 21.25.40] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1560ms
+[20/4/2026, 21.25.40] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1845ms
+[20/4/2026, 21.25.40] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1859ms
+[20/4/2026, 21.25.41] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.41] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 19ms
+[20/4/2026, 21.25.44] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.44] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.25.46] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.46] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 487ms
+[20/4/2026, 21.25.47] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.47] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.25.47] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.48] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 449ms
+[20/4/2026, 21.25.48] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.49] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 449ms
+[20/4/2026, 21.25.50] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.50] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 8ms
+[20/4/2026, 21.25.52] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.52] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.52] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 547ms
+[20/4/2026, 21.25.53] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.53] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 530ms
+[20/4/2026, 21.25.53] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 8ms
+[20/4/2026, 21.25.53] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 576ms
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 575ms
+[20/4/2026, 21.25.53] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 613ms
+[20/4/2026, 21.25.54] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 652ms
+[20/4/2026, 21.25.56] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.56] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 10ms
+[20/4/2026, 21.25.58] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.59] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 560ms
+[20/4/2026, 21.25.59] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.59] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 10ms
+[20/4/2026, 21.25.59] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.25.59] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 394ms
+[20/4/2026, 21.26.02] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.02] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 4ms
+[20/4/2026, 21.26.05] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.05] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 16ms
+[20/4/2026, 21.26.08] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.08] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 6ms
+[20/4/2026, 21.26.11] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.11] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.26.14] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.14] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 8ms
+[20/4/2026, 21.26.17] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.17] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 11ms
+[20/4/2026, 21.26.21] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.21] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 7ms
+[20/4/2026, 21.26.21] [INFO ] [REQUEST     ] POST /api/submit-exam | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.21] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.21] [INFO ] [RESPONSE    ] POST /api/submit-exam → 200 | 106ms
+[20/4/2026, 21.26.23] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1601ms
+[20/4/2026, 21.26.24] [INFO ] [REQUEST     ] GET /api/check-status/51 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.24] [INFO ] [RESPONSE    ] GET /api/check-status/51 → 200 | 20ms
+[20/4/2026, 21.26.26] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.26] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 7ms
+[20/4/2026, 21.26.26] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.26.26] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 10ms
+[20/4/2026, 21.33.29] [INFO ] [REQUEST     ] POST /api/login | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.29] [INFO ] [LOGIN       ] Upaya login NIM: "22533567" | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.29] [INFO ] [LOGIN       ] User found: YES | NIM: 22533567 | isSpecial: false
+[20/4/2026, 21.33.29] [INFO ] [LOGIN       ] Verifying password for: 22533567 | has_hash: true
+[20/4/2026, 21.33.30] [INFO ] [LOGIN       ] Password check result: VALID | NIM: 22533567
+[20/4/2026, 21.33.30] [INFO ] [LOGIN       ] Login BERHASIL: 22533567 | role: student | user_id: 8
+[20/4/2026, 21.33.30] [INFO ] [RESPONSE    ] POST /api/login → 200 | 232ms
+[20/4/2026, 21.33.30] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.30] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.30] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 22ms
+[20/4/2026, 21.33.30] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 23ms
+[20/4/2026, 21.33.37] [INFO ] [REQUEST     ] POST /api/start-exam | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.37] [INFO ] [RESPONSE    ] POST /api/start-exam → 200 | 16ms
+[20/4/2026, 21.33.37] [INFO ] [REQUEST     ] GET /api/questions | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.37] [INFO ] [RESPONSE    ] GET /api/questions → 200 | 10ms
+[20/4/2026, 21.33.40] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.40] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.33.43] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.43] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.33.46] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.46] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.33.49] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.49] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.33.52] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.52] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.33.55] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.55] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 5ms
+[20/4/2026, 21.33.58] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.33.58] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.00] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.01] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 507ms
+[20/4/2026, 21.34.01] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.01] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.04] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.04] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 462ms
+[20/4/2026, 21.34.04] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.04] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 19ms
+[20/4/2026, 21.34.07] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.07] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.10] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.10] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 20ms
+[20/4/2026, 21.34.13] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.13] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 9ms
+[20/4/2026, 21.34.14] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.14] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 657ms
+[20/4/2026, 21.34.16] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.16] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.19] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.19] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 9ms
+[20/4/2026, 21.34.22] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.22] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.34.23] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.23] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.24] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 443ms
+[20/4/2026, 21.34.24] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 396ms
+[20/4/2026, 21.34.26] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.26] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.29] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.29] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 9ms
+[20/4/2026, 21.34.32] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.32] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.35] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.35] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 9ms
+[20/4/2026, 21.34.38] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.38] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.41] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.41] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.44] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.44] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.47] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.47] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.50] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.50] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 8ms
+[20/4/2026, 21.34.53] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.53] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.56] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.56] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.56] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.34.56] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.56] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 454ms
+[20/4/2026, 21.34.57] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 381ms
+[20/4/2026, 21.34.59] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.34.59] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.35.02] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.02] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.35.04] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.05] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 594ms
+[20/4/2026, 21.35.05] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.05] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 21ms
+[20/4/2026, 21.35.06] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.06] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 410ms
+[20/4/2026, 21.35.09] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.09] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 5ms
+[20/4/2026, 21.35.12] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.12] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.15] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.15] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.35.18] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.18] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.22] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.22] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.35.25] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.25] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.28] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.28] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.31] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.31] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 3ms
+[20/4/2026, 21.35.34] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.34] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.38] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.38] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.41] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.41] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.44] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.44] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 3ms
+[20/4/2026, 21.35.47] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.47] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.35.51] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.51] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.35.54] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.54] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.35.57] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.35.57] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.00] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.00] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.03] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.03] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.07] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.07] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.36.10] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.10] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.13] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.13] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 5ms
+[20/4/2026, 21.36.16] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.16] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.20] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.20] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.23] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.23] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 4ms
+[20/4/2026, 21.36.26] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.26] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 6ms
+[20/4/2026, 21.36.29] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.29] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 5ms
+[20/4/2026, 21.36.32] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.32] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 16ms
+[20/4/2026, 21.36.35] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.35] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 5ms
+[20/4/2026, 21.36.39] [INFO ] [REQUEST     ] GET /api/check-status/52 | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.39] [INFO ] [RESPONSE    ] GET /api/check-status/52 → 200 | 7ms
+[20/4/2026, 21.36.39] [INFO ] [REQUEST     ] POST /api/submit-exam | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.39] [INFO ] [REQUEST     ] POST /api/submit-log | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.39] [INFO ] [RESPONSE    ] POST /api/submit-exam → 200 | 94ms
+[20/4/2026, 21.36.41] [INFO ] [RESPONSE    ] POST /api/submit-log → 200 | 1604ms
+[20/4/2026, 21.36.42] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.42] [INFO ] [REQUEST     ] GET /api/exams | IP: ::ffff:127.0.0.1
+[20/4/2026, 21.36.42] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 14ms
+[20/4/2026, 21.36.42] [INFO ] [RESPONSE    ] GET /api/exams → 200 | 11ms

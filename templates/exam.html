@@ -1,79 +1,671 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
-    <title>Ujian - CBT Anti-Cheating</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian – {{ exam.subject_name }}</title>
+    <meta name="description" content="Halaman ujian online CBT Anti-Cheating">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8f9fa;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #818cf8;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg: #0f0f1a;
+            --surface: #1a1a2e;
+            --surface2: #16213e;
+            --surface3: #0d1117;
+            --border: rgba(255,255,255,0.08);
+            --border2: rgba(255,255,255,0.05);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
         }
 
-        .header {
-            background: #343a40;
-            color: white;
-            padding: 1rem;
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+        }
+
+        /* ========== TOPBAR ========== */
+        .topbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .topbar-left {
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .logo-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+        }
+        .logo-text { font-weight: 700; font-size: 1rem; color: var(--text); }
+        .logo-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+
+        .topbar-center {
             text-align: center;
         }
+        .exam-title-top { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+        .exam-subtitle-top { font-size: 0.72rem; color: var(--text-muted); }
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        .topbar-right {
+            display: flex; align-items: center; gap: 1rem;
         }
 
-        .question {
+        /* Timer */
+        .timer-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.4rem 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .timer-label { font-size: 0.7rem; color: var(--text-muted); }
+        .timer-value {
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--success);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+        .timer-value.warn { color: var(--warning); }
+        .timer-value.danger { color: var(--danger); animation: pulse 0.8s ease-in-out infinite; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Status badge */
+        .status-badge {
+            display: flex; align-items: center; gap: 0.4rem;
+            background: rgba(16,185,129,0.1);
+            border: 1px solid rgba(16,185,129,0.25);
+            border-radius: 20px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem; font-weight: 500; color: var(--success);
+        }
+        .status-dot {
+            width: 7px; height: 7px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: blink 1.4s ease-in-out infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* ========== LAYOUT ========== */
+        .main-layout {
+            display: flex;
+            margin-top: 64px;
+            min-height: calc(100vh - 64px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            padding: 1.5rem 1rem;
+            flex-shrink: 0;
+            overflow-y: auto;
+            position: fixed;
+            top: 64px; left: 0; bottom: 0;
+        }
+        .sidebar-section-title {
+            font-size: 0.7rem; font-weight: 600;
+            color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.1em; margin-bottom: 0.75rem; padding: 0 0.5rem;
+        }
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+        .q-btn {
+            aspect-ratio: 1;
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            border-radius: 8px;
+            font-size: 0.75rem; font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.15s;
+        }
+        .q-btn:hover { border-color: var(--primary-light); color: var(--primary-light); }
+        .q-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; font-weight: 700; }
+        .q-btn.answered { background: rgba(16,185,129,0.15); border-color: rgba(16,185,129,0.4); color: var(--success); }
+        .q-btn.answered.active { background: var(--success); border-color: var(--success); color: #fff; }
+
+        .sidebar-legend {
+            margin-top: 0.5rem;
+        }
+        .legend-item {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.75rem; color: var(--text-muted);
+            padding: 0.2rem 0.5rem;
+        }
+        .legend-dot {
+            width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0;
+        }
+        .legend-dot.current { background: var(--primary); }
+        .legend-dot.answered { background: var(--success); opacity: 0.6; }
+        .legend-dot.empty { background: var(--surface2); border: 1px solid var(--border); }
+
+        .sidebar-info {
+            margin-top: 1.5rem;
+            background: var(--surface2);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid var(--border);
+        }
+        .info-row {
+            display: flex; justify-content: space-between;
+            font-size: 0.78rem; margin-bottom: 0.5rem;
+        }
+        .info-row:last-child { margin-bottom: 0; }
+        .info-label { color: var(--text-muted); }
+        .info-val { color: var(--text); font-weight: 600; }
+
+        /* ========== EXAM CONTENT ========== */
+        .exam-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .question-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 780px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-meta {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        .question-num {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: #fff;
+            font-size: 0.75rem; font-weight: 700;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+        }
+        .question-points {
+            font-size: 0.78rem; color: var(--text-muted);
+            background: var(--surface2); border-radius: 20px;
+            padding: 0.3rem 0.8rem; border: 1px solid var(--border);
+        }
+
+        .question-text {
+            font-size: 1.05rem; font-weight: 500;
+            line-height: 1.7; color: var(--text);
             margin-bottom: 2rem;
         }
 
-        .options {
-            list-style: none;
-            padding: 0;
+        .options-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .option-label {
+            display: flex; align-items: center; gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--surface2);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .option-label::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .option-label:hover {
+            border-color: rgba(79,70,229,0.5);
+            background: rgba(79,70,229,0.08);
+        }
+        .option-label:hover::before { opacity: 0.04; }
+
+        input[type="radio"] { display: none; }
+        input[type="radio"]:checked + .option-label {
+            border-color: var(--primary-light);
+            background: rgba(79,70,229,0.12);
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+        }
+        input[type="radio"]:checked + .option-label .opt-circle {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        input[type="radio"]:checked + .option-label .opt-circle::after {
+            opacity: 1; transform: scale(1);
         }
 
-        .options li {
-            margin: 0.5rem 0;
+        .opt-circle {
+            width: 22px; height: 22px; flex-shrink: 0;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; z-index: 1;
+        }
+        .opt-circle::after {
+            content: '';
+            width: 8px; height: 8px;
+            background: #fff; border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.2s;
+        }
+        .opt-key {
+            width: 28px; height: 28px; flex-shrink: 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 700;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            position: relative; z-index: 1;
+            transition: all 0.2s;
+        }
+        .opt-text {
+            font-size: 0.9rem; color: var(--text);
+            line-height: 1.5;
+            position: relative; z-index: 1;
         }
 
-        .footer {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
+        /* Navigation */
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
             margin-top: 2rem;
+            width: 100%; max-width: 780px;
+        }
+        .nav-secondary {
+            display: flex; gap: 0.5rem;
+        }
+        .btn {
+            padding: 0.7rem 1.4rem;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem; font-weight: 600;
+            cursor: pointer; border: none;
+            transition: all 0.2s;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+        .btn-ghost:hover { border-color: var(--primary-light); color: var(--primary-light); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(79,70,229,0.35);
+        }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(79,70,229,0.45); }
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(239,68,68,0.3);
+        }
+        .btn-danger:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(239,68,68,0.4); }
+
+        /* Warning Toast */
+        .toast {
+            position: fixed;
+            top: 80px; left: 50%; transform: translateX(-50%) translateY(-100px);
+            background: var(--danger);
+            color: #fff; font-size: 0.85rem; font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            display: flex; align-items: center; gap: 0.5rem;
+            z-index: 999;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 8px 24px rgba(239,68,68,0.4);
+            white-space: nowrap;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+
+        /* Submit Modal */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            z-index: 200;
+            display: none; align-items: center; justify-content: center;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 400px; max-width: 90vw;
+            text-align: center;
+            animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .modal-title { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+        .modal-desc { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6; }
+        .modal-stats {
+            display: flex; gap: 1rem;
+            background: var(--surface2); border-radius: 12px;
+            padding: 1rem; margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .modal-stat { flex: 1; text-align: center; }
+        .modal-stat-val { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+        .modal-stat-label { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+        .modal-actions { display: flex; gap: 0.75rem; }
+        .modal-actions .btn { flex: 1; justify-content: center; }
+
+        /* Footer */
+        .exam-footer {
+            position: fixed;
+            bottom: 0; left: 260px; right: 0;
+            background: var(--surface3);
+            border-top: 1px solid var(--border);
+            padding: 0.6rem 2rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            font-size: 0.75rem; color: var(--text-muted);
+        }
+        .footer-dot { width: 6px; height: 6px; background: var(--danger); border-radius: 50%; animation: blink 1.4s infinite; }
+
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .exam-content { margin-left: 0; padding: 1rem; }
+            .exam-footer { left: 0; }
         }
     </style>
 </head>
 
 <body oncopy="return false" oncut="return false" onpaste="return false">
-    <div class="header">
-        <h1>CBT Online - Anti Cheating Engine</h1>
-    </div>
-    <div class="container">
-        <h3>{{ exam.subject_name }}</h3>
-        <hr>
-        <div class="question">
-            <p>1. Apa fungsi utama dari algoritma Random Forest pada aplikasi ini?</p>
-            <ul class="options">
-                <li><input type="radio" name="q1"> Menghitung nilai ujian</li>
-                <li><input type="radio" name="q1"> Mendeteksi perilaku kecurangan berdasarkan log</li>
-                <li><input type="radio" name="q1"> Menyimpan data ke database</li>
-                <li><input type="radio" name="q1"> Mengacak urutan soal</li>
-            </ul>
+
+    <!-- Warning Toast -->
+    <div class="toast" id="warnToast">⚠️ <span id="warnText">Pelanggaran terdeteksi!</span></div>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="logo-icon">🎓</div>
+            <div>
+                <div class="logo-text">CBT Online</div>
+                <div class="logo-sub">Anti-Cheating Engine</div>
+            </div>
         </div>
-        <button
-            style="padding: 0.75rem 1.5rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Selesai
-            Ujian</button>
+        <div class="topbar-center">
+            <div class="exam-title-top">{{ exam.subject_name }}</div>
+            <div class="exam-subtitle-top">Sesi Ujian Aktif</div>
+        </div>
+        <div class="topbar-right">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                Pemantauan Aktif
+            </div>
+            <div class="timer-box">
+                <div>
+                    <div class="timer-label">Sisa Waktu</div>
+                    <div class="timer-value" id="timer">90:00</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section-title">Navigasi Soal</div>
+            <div class="question-grid" id="questionGrid">
+                <!-- Generated by JS -->
+            </div>
+
+            <div class="sidebar-legend">
+                <div class="legend-item"><div class="legend-dot current"></div>Soal Aktif</div>
+                <div class="legend-item"><div class="legend-dot answered"></div>Sudah Dijawab</div>
+                <div class="legend-item"><div class="legend-dot empty"></div>Belum Dijawab</div>
+            </div>
+
+            <div class="sidebar-info">
+                <div class="info-row">
+                    <span class="info-label">Total Soal</span>
+                    <span class="info-val" id="totalQuestions">1</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Dijawab</span>
+                    <span class="info-val" id="answeredCount" style="color:var(--success)">0</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Belum Dijawab</span>
+                    <span class="info-val" id="unansweredCount" style="color:var(--warning)">1</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Exam Area -->
+        <main class="exam-content">
+            <div class="question-card">
+                <div class="question-meta">
+                    <span class="question-num">SOAL 1 dari 1</span>
+                    <span class="question-points">⚡ 10 Poin</span>
+                </div>
+
+                <p class="question-text">
+                    Apa fungsi utama dari algoritma <strong>Random Forest</strong> pada sistem CBT Anti-Cheating ini?
+                </p>
+
+                <form id="examForm">
+                    <ul class="options-list">
+                        <li>
+                            <input type="radio" name="q1" id="q1a" value="A">
+                            <label for="q1a" class="option-label">
+                                <div class="opt-circle"></div>
+                                <div class="opt-key">A</div>
+                                <span class="opt-text">Menghitung nilai akhir ujian peserta secara otomatis</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q1" id="q1b" value="B">
+                            <label for="q1b" class="option-label">
+                                <div class="opt-circle"></div>
+                                <div class="opt-key">B</div>
+                                <span class="opt-text">Mendeteksi perilaku kecurangan berdasarkan log aktivitas peserta</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q1" id="q1c" value="C">
+                            <label for="q1c" class="option-label">
+                                <div class="opt-circle"></div>
+                                <div class="opt-key">C</div>
+                                <span class="opt-text">Menyimpan data soal dan jawaban ke dalam database</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q1" id="q1d" value="D">
+                            <label for="q1d" class="option-label">
+                                <div class="opt-circle"></div>
+                                <div class="opt-key">D</div>
+                                <span class="opt-text">Mengacak urutan soal agar setiap peserta berbeda</span>
+                            </label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="nav-bar">
+                <div class="nav-secondary">
+                    <button class="btn btn-ghost" disabled>← Sebelumnya</button>
+                    <button class="btn btn-ghost" disabled>Selanjutnya →</button>
+                </div>
+                <button class="btn btn-danger" id="submitBtn" onclick="showModal()">
+                    ✅ Selesai Ujian
+                </button>
+            </div>
+        </main>
     </div>
-    <div class="footer">
-        Sistem pemantauan aktif. Dilarang berpindah tab atau menggunakan tombol pintas.
+
+    <!-- Footer -->
+    <div class="exam-footer">
+        <div class="footer-dot"></div>
+        Sistem pemantauan aktif — Dilarang berpindah tab, klik kanan, atau menggunakan tombol pintasan
     </div>
+
+    <!-- Submit Modal -->
+    <div class="modal-overlay" id="submitModal">
+        <div class="modal-box">
+            <div class="modal-icon">📋</div>
+            <div class="modal-title">Konfirmasi Pengumpulan</div>
+            <div class="modal-desc">Pastikan semua soal telah dijawab sebelum mengumpulkan. Jawaban tidak dapat diubah setelah dikumpulkan.</div>
+            <div class="modal-stats">
+                <div class="modal-stat">
+                    <div class="modal-stat-val" id="mAnswered">0</div>
+                    <div class="modal-stat-label">Dijawab</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-val" style="color:var(--warning)" id="mUnanswered">1</div>
+                    <div class="modal-stat-label">Belum Dijawab</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-val">1</div>
+                    <div class="modal-stat-label">Total Soal</div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-ghost" onclick="closeModal()">Kembali</button>
+                <button class="btn btn-danger" id="confirmSubmit" onclick="submitExam()">Kumpulkan Ujian</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ---- Timer ----
+        let minutes = 90, seconds = 0;
+        const timerEl = document.getElementById('timer');
+        function updateTimer() {
+            const total = minutes * 60 + seconds;
+            const m = String(minutes).padStart(2, '0');
+            const s = String(seconds).padStart(2, '0');
+            timerEl.textContent = `${m}:${s}`;
+            if (total <= 300) timerEl.className = 'timer-value danger';
+            else if (total <= 900) timerEl.className = 'timer-value warn';
+            else timerEl.className = 'timer-value';
+            if (total <= 0) { alert('Waktu habis! Ujian dikumpulkan.'); return; }
+            if (seconds === 0) { minutes--; seconds = 59; } else { seconds--; }
+            setTimeout(updateTimer, 1000);
+        }
+        updateTimer();
+
+        // ---- Question Grid ----
+        const totalQ = 1;
+        const answers = {};
+        const grid = document.getElementById('questionGrid');
+        document.getElementById('totalQuestions').textContent = totalQ;
+        document.getElementById('unansweredCount').textContent = totalQ;
+        for (let i = 1; i <= totalQ; i++) {
+            const b = document.createElement('button');
+            b.className = 'q-btn active';
+            b.textContent = i;
+            b.onclick = () => jumpTo(i);
+            b.id = `qbtn-${i}`;
+            grid.appendChild(b);
+        }
+
+        // Track answers
+        document.querySelectorAll('input[type="radio"]').forEach(r => {
+            r.addEventListener('change', () => {
+                const qNum = parseInt(r.name.replace('q', ''));
+                answers[qNum] = r.value;
+                updateCounts();
+                const btn = document.getElementById(`qbtn-${qNum}`);
+                if (btn) btn.className = 'q-btn answered active';
+            });
+        });
+
+        function updateCounts() {
+            const ans = Object.keys(answers).length;
+            document.getElementById('answeredCount').textContent = ans;
+            document.getElementById('unansweredCount').textContent = totalQ - ans;
+            document.getElementById('mAnswered').textContent = ans;
+            document.getElementById('mUnanswered').textContent = totalQ - ans;
+        }
+
+        function jumpTo(n) {
+            // for future multi-question navigation
+        }
+
+        // ---- Modal ----
+        function showModal() {
+            document.getElementById('submitModal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('submitModal').classList.remove('active');
+        }
+        function submitExam() {
+            document.getElementById('confirmSubmit').textContent = 'Mengumpulkan...';
+            setTimeout(() => {
+                alert('Ujian berhasil dikumpulkan. Terima kasih!');
+                window.location.href = '/login';
+            }, 1200);
+        }
+
+        // ---- Warning Toast ----
+        function showToast(msg) {
+            const t = document.getElementById('warnToast');
+            document.getElementById('warnText').textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3500);
+        }
+    </script>
 
     <script src="{{ url_for('static', filename='js/monitor.js') }}"></script>
 </body>
-
 </html>
